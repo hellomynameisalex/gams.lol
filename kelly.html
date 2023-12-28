@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ username }}</title>
+    <title>@kelly</title>
     <script src="https://kit.fontawesome.com/b801578fa3.js" crossorigin="anonymous"></script>
     <style>
         @import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
@@ -20,7 +20,6 @@
             -webkit-backdrop-filter: blur(10px);
             border:1px solid rgba(255, 255, 255, 0.18);
             box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-
             position: fixed;
             top: 0;
             left: 0;
@@ -35,7 +34,7 @@
             opacity: 1;
         }
 
-        #video-background {
+        #myVideo {
             position: fixed;
             top: 0;
             left: 0;
@@ -49,6 +48,7 @@
         }
 
         .container {
+            background: transparent;
             display: flex;
             text-align: center;
             flex-direction: column;
@@ -66,7 +66,7 @@
             margin-top: 30px;
             text-align: center;
             align-items: center;
-            
+            background: transparent;
             border-color: #90EE90;
             border-radius: 10px;
             border-style: solid;
@@ -119,18 +119,14 @@
 </head>
 
 <body>
-    <video autoplay muted loop id="myVideo">
-        <source src="{{ background }}" type="video/mp4">
+    <video autoplay loop id="myVideo">
+        <source src="https://cdn.discordapp.com/attachments/1189873573989462047/1189928629363298395/videoplaybackfras.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
 
-    <audio id="music">
-        <source src="{{ song }}" type="audio/mpeg">
-    </audio>    
-
     <div class="container">
-        <h1 class="username">Kelly</h1>
-        <p>Hi! Welcome to my profile.</p>
+        <h1 class="username">kelly</h1>
+        <p>I'm just a founder :D</p>
         <br>
         <br>
         <div class="user-icon-box">
@@ -150,7 +146,7 @@
     </div>
 
     <div id="clickanywhere">
-        <h1>Click me to enter this special bio!</h1>
+        <h1>Click anywhere to enter this special profile!</h1>
     </div>
 
 
