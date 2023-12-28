@@ -1,0 +1,259 @@
+<html dir="ltr" lang="en-US"><!--
+  ███╗   ██╗██╗ ██████╗ ██╗  ██╗████████╗██╗   ██╗
+  ████╗  ██║██║██╔════╝ ██║  ██║╚══██╔══╝╚██╗ ██╔╝
+  ██╔██╗ ██║██║██║  ███╗███████║   ██║    ╚████╔╝ 
+  ██║╚██╗██║██║██║   ██║██╔══██║   ██║     ╚██╔╝  
+  ██║ ╚████║██║╚██████╔╝██║  ██║   ██║      ██║   
+  ╚═╝  ╚═══╝╚═╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝      ╚═╝   
+--><head><meta http-equiv="content-type" content="text/html;charset=UTF-8">
+
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="Let's make your Discord experience better. Nighty - the most advanced Discord tool yet.">
+<meta name="keywords" content="Nighty">
+<link href="assets/images/favicon/nighty.ico" rel="icon">
+<link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i%7COpen+Sans:300,300i,400,400i,600,600i,700,700i,800,800" rel="stylesheet" type="text/css">
+<link href="assets/css/external.css" rel="stylesheet">
+<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/css/style-new.css" rel="stylesheet">
+<link href="assets/css/resellers.css" rel="stylesheet">
+<link href="assets/css/twozero.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+<meta property="og:title" content="Nighty">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nighty.one/">
+<meta property="twitter:image" content="https://cdn.discordapp.com/attachments/752276428342427699/782670503424294912/gifnewnew30fpsFIX.gif">
+<meta property="og:description" content="The way Discord was meant to be used.">
+<meta name="theme-color" content="#40A0C6">
+<title>Nighty</title>
+<style>
+/* Temporary stylesheet */
+.pricing--desc__item {
+display: block;
+}
+
+.youtube-videos-wrapper {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(min(400px, 90%), 1fr));
+gap: 2em;
+}
+
+.yt-vid-iframe {
+width: 100%;
+}
+
+.new-video::before {
+content: "NEW VIDEO";
+display: grid;
+place-content: center;
+background: linear-gradient(290deg,
+rgb(71, 34, 202) 0%,
+rgb(45, 76, 253) 100%);
+z-index: 1;
+position: absolute;
+color: #fff;
+font-size: 1.4em;
+padding: 0.5rem 1rem;
+font-family: inherit;
+font-weight: 800;
+bottom: 0;
+left: 50%;
+box-shadow: 0 10px 10px 0 #1d1d1db4;
+transform: translateX(-50%) translateY(70%) skew(-15deg) rotate(-2deg);
+translate: 0;
+transform-origin: center center;
+transition: translate 0.3s, box-shadow 0.3s;
+animation: new-video 1s alternate 0s infinite ease-in-out;
+}
+
+.new-video:hover::before {
+translate: 0 20%;
+box-shadow: 0 5px 7px 0 #1d1d1db4;
+}
+
+@media (max-width: 400px) {
+.new-video::before {
+font-size: 1.1em;
+}
+}
+
+@keyframes new-video {
+from {
+scale: 1;
+}
+
+to {
+scale: 1.05;
+}
+}
+
+.video-container {
+overflow: unset;
+position: relative;
+width: 100%;
+}
+
+.year-award-box {
+display: flex;
+justify-content: center;
+align-items: center;
+position: fixed;
+z-index: 10001;
+max-width: 500px;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 100%;
+opacity: 1;
+visibility: visible;
+transition: visibility 0.7s, opacity 0.7s;
+}
+
+.year-award-video {
+max-width: 500px;
+max-height: 375px;
+width: 100%;
+height: auto;
+transform: scale(100%);
+visibility: visible;
+opacity: 1;
+transition: visibility 0.7s, opacity 0.7s, transform 0.7s;
+}
+
+.award-video-hidden {
+visibility: hidden;
+opacity: 0;
+transform: scale(0%);
+}
+
+.overlay-award {
+z-index: 10000;
+background-color: rgba(0, 0, 0, 0.5);
+width: 100vw;
+height: 100vh;
+position: fixed;
+transition: visibility 0.3s, opacity 0.3s;
+}
+
+.award-hidden {
+visibility: hidden;
+opacity: 0;
+}
+
+.bta-new {
+cursor: pointer;
+}
+
+@media (max-width: 550px) {
+.year-award-video {
+width: 90%;
+}
+}
+
+</style>
+
+<style>
+
+.shoppy-wrapper > .shoppy-container {
+position: relative;
+width: 100%;
+height: 0;
+padding-bottom: 56.25%;
+}
+
+.shoppy-wrapper > .shoppy-container > iframe {
+background: transparent !important;
+border: none;
+height: 100vh;
+width: 90vw;
+margin-right: auto;
+left: 50%;
+position: absolute;
+margin-left: -45vw;
+}
+
+.shoppy-close {
+z-index: 9999999999;
+height: 40px;
+position: fixed;
+right: 20px;
+top: 20px;
+width: 40px;
+margin: 0;
+border-radius: 50%;
+cursor: pointer
+}
+
+.shoppy-close:hover {
+background: rgba(0, 0, 0, .4)
+}
+
+.shoppy-close:after, .shoppy-close:before {
+background: #fff;
+content: '';
+display: block;
+left: 50%;
+position: absolute;
+top: 50%;
+height: 70%;
+width: 2px
+}
+
+.shoppy-close:before {
+-webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+-webkit-transform-origin: center center;
+transform: translateX(-50%) translateY(-50%) rotate(45deg);
+transform-origin: center center
+}
+
+</style>
+<script src="https://cdn.jsdelivr.net/emojione/2.2.7/lib/js/emojione.min.js" type="text/javascript" async="" defer=""></script><script src="https://cdn.jsdelivr.net/emojione/2.2.7/lib/js/emojione.min.js" type="text/javascript" async="" defer=""></script><style type="text/css">@keyframes tawkMaxOpen{0%{opacity:0;transform:translate(0, 30px);;}to{opacity:1;transform:translate(0, 0px);}}@-moz-keyframes tawkMaxOpen{0%{opacity:0;transform:translate(0, 30px);;}to{opacity:1;transform:translate(0, 0px);}}@-webkit-keyframes tawkMaxOpen{0%{opacity:0;transform:translate(0, 30px);;}to{opacity:1;transform:translate(0, 0px);}}#kd5qbsvism1g1703768586025.open{animation : tawkMaxOpen .25s ease!important;}@keyframes tawkMaxClose{from{opacity: 1;transform:translate(0, 0px);;}to{opacity: 0;transform:translate(0, 30px);;}}@-moz-keyframes tawkMaxClose{from{opacity: 1;transform:translate(0, 0px);;}to{opacity: 0;transform:translate(0, 30px);;}}@-webkit-keyframes tawkMaxClose{from{opacity: 1;transform:translate(0, 0px);;}to{opacity: 0;transform:translate(0, 30px);;}}#kd5qbsvism1g1703768586025.closed{animation: tawkMaxClose .25s ease!important}</style></head><body class="body-scroll page-dark">
+<div id="wrapper" class="wrapper clearfix">
+<!-- <div class="notification-bar"> -->
+<!-- <p>Our private server has been terminated by Discord, a new Discord server has been made.<br>Grab your license key and join the new server <a href="https://nighty.one/get-links/" style="color: black;" target="_blank">here</a>.</p> -->
+<!-- <p>Our private server has been terminated by Discord, a new Discord server is under construction.<br />Updates
+will be posted on the <a style="color: black;" href="https://nighty.support/" target="_blank">Support
+Portal</a>.</p>
+</div> -->
+<header id="navbar-spy" class="header header-1 header-transparent header-bordered header-fixed">
+<nav id="primary-menu" class="navbar navbar-fixed-top affix">
+<div class="container">
+<div class="navbar-header">
+  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+    <span class="sr-only">Toggle navigation</span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+  <a class="logo" href="index.html">
+    <img class="logo-dark" src="assets/images/logo/nighty.ico" alt="nighty.one" width="80" height="80">
+    <img class="logo-light" src="assets/images/logo/nighty.ico" alt="nighty.one" width="80" height="80">
+  </a>
+</div>
+<div class="collapse navbar-collapse pull-right" id="navbar-collapse-1">
+  <ul class="nav navbar-nav nav-pos-right navbar-left nav-split">
+    <li class="active"><a data-scroll="scrollTo" href="#slider">home</a>
+    </li>
+    <li><a data-scroll="scrollTo" href="#whyus">Why Us</a>
+    </li>
+    <li><a data-scroll="scrollTo" href="#showcase">Showcase</a>
+    </li>
+    <li><a data-scroll="scrollTo" href="#features">Features</a>
+    </li>
+    <li><a data-scroll="scrollTo" href="#reviews">Reviews</a>
+    </li>
+    <li><a data-scroll="scrollTo" href="#buy">Get Nighty</a>
+    </li>
+    <li><a href="https://nighty.support" ,="" target="_blank">Support Portal</a>
+    </li>
+  </ul>
+</div>
+</div>
+</nav>
+</header>
+
+<section id="slider" class="section slider slider-first">
+<div class="slide--item bg-overlay bg-overlay-dark slide-first-content">
+

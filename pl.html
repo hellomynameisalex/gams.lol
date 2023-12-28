@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ username }}</title>
+    <script src="https://kit.fontawesome.com/b801578fa3.js" crossorigin="anonymous"></script>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+        html {
+            font-family: 'Kanit', sans-serif;
+            background-color: black;
+            color: white;
+        }
+
+        #clickanywhere {
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border:1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(10px);
+            transition: opacity 0.5s ease-in-out;
+            opacity: 1;
+        }
+
+        #video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            object-fit: cover;
+        }
+
+        .container {
+            display: flex;
+            text-align: center;
+            flex-direction: column;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-style: solid;
+            padding: 50px;
+            border-radius: 10px;
+            border-color: #90EE90;
+        }
+
+        .user-icon-box {
+            margin-top: 30px;
+            text-align: center;
+            align-items: center;
+            
+            border-color: #90EE90;
+            border-radius: 10px;
+            border-style: solid;
+            width:fit-content;
+            position:relative;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 5px;
+        }
+
+        .user-icon {
+            position:relative;
+            margin: 10px;
+            display:inline-block;
+        }
+
+        .user-icon::after {
+            content:attr(data-text);
+            position: absolute;
+            top:-50px;
+            left:50%;
+            transform:translateX(-50%);
+            background-color:rgba(123, 255, 137, 0.8);
+            color:#fff;
+            padding:5px;
+            border-color: #90EE90;
+            border-radius:5px;
+            font-size:14px;
+            opacity:0;
+            transition:opacity .1s ease-in;
+        }
+
+
+        .user-icon.active::after,.user-icon:hover::after{
+            opacity:1;
+            transition: opacity .1s ease-out;
+        }
+
+
+        .username {
+            display: inline;
+            position: relative;
+        }
+
+        .username {
+            background-image: url(https://cdn.discordapp.com/attachments/1189873573989462047/1189908639197167746/ezgif.com-effects1.gif);
+        }
+
+    </style>
+</head>
+
+<body>
+    <video autoplay muted loop id="video-background">
+        <source src="{{ background }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="container">
+        <h1 class="username">{{ username }}</h1>
+        <p>{{ biotext }}</p>
+        <br>
+        <br>
+        <div class="user-icon-box">
+            <div class="user-icon" id="founder-icon" data-text="Founder">
+                <i class="fa-solid fa-crown fa-xl" aria-hidden="true"></i>
+            </div>
+            <div class="user-icon" id="dev-icon" data-text="Developer">
+                <i class="fa-solid fa-code fa-xl" aria-hidden="true"></i>
+            </div>
+            <div class="user-icon" id="admin-icon" data-text="Admin">
+                <i class="fa-solid fa-hammer fa-xl" aria-hidden="true"></i>
+            </div>
+            <div class="user-icon" id="user-icon" data-text="User">
+                <i class="fa-solid fa-user fa-xl" aria-hidden="true"></i>
+            </div>
+        </div>
+    </div>
+
+    <div id="clickanywhere">
+        <h1>Click anywhere to enter</h1>
+    </div>
+
+    <audio id="song">
+        <source src="{{ song }}" type="audio/mpeg">
+    </audio>    
+
+    <script>
+        document.addEventListener("click", function () {
+            var clickAnywhereElement = document.getElementById("clickanywhere");
+            clickAnywhereElement.style.opacity = "0";
+            setTimeout(function () {
+                clickAnywhereElement.style.display = "none";
+            }, 500);
+            document.getElementById("song").play();
+        });
+    </script>
+</body>
+
+</html>
