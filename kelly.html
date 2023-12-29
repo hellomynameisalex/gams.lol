@@ -157,6 +157,24 @@
 
 
     <script>
+        async function typewriteTitle() {
+            var str = "kelly";
+             for (let i = 0; i < str.length; i++) {
+                document.title += str.charAt(i);
+                await sleep(700);
+            }
+
+            await sleep(500)
+
+            for (let i = str.length - 1; i >= 0; i--) {
+                document.title = document.title.slice(0, -1);
+                await sleep(700);
+            }
+
+            typewriteTitle();
+        }
+
+            typewriteTitle();
 
         function playMusic() {
             var play = document.getElementById("music");
